@@ -17,7 +17,8 @@ vibe-coding-made-easy/
 - `stages.json`: the stops a roadmap can include (design, build, data, auth, payments, and so on).
 - `idea-types.json`: each idea type and which stops it passes through, in order.
 - `tools.json`: one entry per tool:
-  - `stage`, `tier` (`popular` or `niche`), `region`, `pricing_model` (coarse)
+  - `stage`, `tier` (`popular` or `niche`), `pricing_model` (coarse)
+  - `region`: `global` unless a tool is focused on one market (for example `africa`, `india`, `europe`). The library is built for a global audience, so the engine should filter by the builder's market instead of assuming one.
   - `best_for`: the one-line pitch
   - `tradeoffs`: what you give up by choosing it
   - `long_term`: what living with it for months looks like (lock-in, ownership, exit paths)

@@ -448,21 +448,19 @@
     "tier": "popular",
     "status": "active",
     "url": "https://flutterwave.com",
-    "best_for": "Cards and mobile money across Africa",
-    "tradeoffs": "Strong African coverage including mobile money. Integration can be fiddlier than Stripe, and which payment methods work differs by country and currency.",
-    "long_term": "Reported to hold a Bank of Zambia payment system licence since February 2025, supporting local and international payments by card and mobile money (MTN, Airtel, Zamtel).",
+    "best_for": "Cards, bank transfers and mobile money across many African markets",
+    "tradeoffs": "Strong African coverage including mobile money in several markets. Integration can be fiddlier than Stripe, and which payment methods work differs by country and currency.",
+    "long_term": "Pick it when your customers are in supported African markets; outside them it adds little over a global processor. Merchant accounts are tied to your business country, so check eligibility early.",
     "watch_out": [
-      "Zambia mobile money is on by default for Zambian merchants; non-Zambian merchants must request it",
-      "Not every method works in every country, so check the methods table per currency",
-      "Test mode auto-approves mobile money, which live payments do not"
+      "Not every payment method works in every country, so check the methods table per currency",
+      "Some payment methods need approval for merchants based outside that market",
+      "Test mode behaves differently from live mobile money"
     ],
     "pricing_model": "paid",
     "region": "africa",
     "confidence": "researched",
     "sources": [
-      "https://developer.flutterwave.com/docs/zambia-mobile-money",
-      "https://thepaypers.com/payments/news/flutterwave-gains-payment-system-licence-from-the-bank-of-zambia",
-      "https://techpoint.africa/news/flutterwave-payment-licence-zambia/"
+      "https://developer.flutterwave.com/docs/collecting-payments/payment-methods"
     ],
     "last_checked": "2026-11-21"
   },
@@ -473,8 +471,8 @@
     "tier": "popular",
     "status": "active",
     "url": "https://paystack.com",
-    "best_for": "Payments for African businesses",
-    "tradeoffs": "Clean developer experience and owned by Stripe since 2020. Country coverage is narrower than Flutterwave, so confirm yours is supported; Zambia coverage was not verified here.",
+    "best_for": "Payments for businesses in supported African markets",
+    "tradeoffs": "Clean developer experience and owned by Stripe since 2020. It covers a limited set of African markets, so confirm your country is supported before building around it.",
     "long_term": "Settlement currency and timing depend on your country and account type.",
     "watch_out": [
       "Verify supported countries and currencies",
@@ -1152,6 +1150,69 @@
     ],
     "pricing_model": "paid",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
+    "last_checked": null
+  },
+  {
+    "id": "razorpay",
+    "name": "Razorpay",
+    "stage": "payments",
+    "tier": "popular",
+    "status": "active",
+    "url": "https://razorpay.com",
+    "best_for": "UPI, cards and netbanking for businesses in India",
+    "tradeoffs": "The usual gateway for Indian businesses, with UPI, cards, netbanking and wallets in one integration. Focused on India, so it is not a global solution.",
+    "long_term": "Going live needs business verification in India, with settlement in rupees.",
+    "watch_out": [
+      "Business verification (KYC) is required before live payments",
+      "Check international card acceptance and fees",
+      "Payment regulations in India change often"
+    ],
+    "pricing_model": "paid",
+    "region": "india",
+    "confidence": "general-knowledge",
+    "sources": [],
+    "last_checked": null
+  },
+  {
+    "id": "mercado-pago",
+    "name": "Mercado Pago",
+    "stage": "payments",
+    "tier": "popular",
+    "status": "active",
+    "url": "https://www.mercadopago.com",
+    "best_for": "Local methods and wallets across Latin America",
+    "tradeoffs": "Wide reach across Latin American markets with local payment methods and wallets. Accounts and features differ per country.",
+    "long_term": "Choose the country account that matches your customers and currency.",
+    "watch_out": [
+      "Methods and fees vary by country",
+      "Verify availability for your business country",
+      "Integration docs differ per market"
+    ],
+    "pricing_model": "paid",
+    "region": "latin-america",
+    "confidence": "general-knowledge",
+    "sources": [],
+    "last_checked": null
+  },
+  {
+    "id": "mollie",
+    "name": "Mollie",
+    "stage": "payments",
+    "tier": "popular",
+    "status": "active",
+    "url": "https://www.mollie.com",
+    "best_for": "European payment methods with simple pricing",
+    "tradeoffs": "Developer-friendly gateway with many European methods (iDEAL, Bancontact, SEPA, cards). Focused on Europe.",
+    "long_term": "Best when most customers are in the EU or UK; less useful elsewhere.",
+    "watch_out": [
+      "Check which business countries are supported",
+      "Method availability depends on the customer's country",
+      "Expect underwriting checks before going live"
+    ],
+    "pricing_model": "paid",
+    "region": "europe",
     "confidence": "general-knowledge",
     "sources": [],
     "last_checked": null
