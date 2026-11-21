@@ -1,0 +1,16 @@
+/* Vibe Coding Made Easy: design tokens. Paper, ink and concrete, one shot of yellow. */
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;800&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap");
+:root{
+  --ink:#111110; --graphite:#3a3a37; --concrete:#8c8a83; --beige:#e8dfcb; --bone:#fbfaf6; --signal:#f4c20d;
+  --muted:#55554f; /* readable grey for small text on beige or bone */
+  --font-display:"Bodoni Moda",serif; --font-body:"Space Grotesk",sans-serif; --font-mono:"IBM Plex Mono",monospace;
+  --cut:18px; --grid:60px;
+}
+body{margin:0;background:var(--beige);color:var(--ink);font-family:var(--font-body)}
+.display{font-family:var(--font-display);font-weight:800;line-height:.95;letter-spacing:-.02em}
+.label{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.cut{clip-path:polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,var(--cut) 100%,0 calc(100% - var(--cut)))}
+.cut2{clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+.chip{display:inline-block;padding:8px 16px;background:var(--ink);color:var(--bone);font-family:var(--font-mono);font-size:13px}
+.chip.niche{background:var(--signal);color:var(--ink)}
+.ruler{height:10px;background:repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 10px)}

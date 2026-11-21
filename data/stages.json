@@ -1,0 +1,77 @@
+[
+  {
+    "id": "design",
+    "title": "See it before you build it",
+    "why": "mock the screens, then lift the code"
+  },
+  {
+    "id": "build",
+    "title": "Talk the app into existence",
+    "why": "prompt-only, or keep the code in your hands"
+  },
+  {
+    "id": "data",
+    "title": "Remember people and things",
+    "why": "databases"
+  },
+  {
+    "id": "auth",
+    "title": "Let people sign in",
+    "why": "logins and accounts"
+  },
+  {
+    "id": "payments",
+    "title": "Get paid",
+    "why": "pick a gateway for your region"
+  },
+  {
+    "id": "email",
+    "title": "Say thank you",
+    "why": "transactional email"
+  },
+  {
+    "id": "ai",
+    "title": "Add a brain",
+    "why": "models and voices"
+  },
+  {
+    "id": "mobile",
+    "title": "Put it on a phone",
+    "why": "app stores or installable"
+  },
+  {
+    "id": "game",
+    "title": "Make it playable",
+    "why": "engines for the browser"
+  },
+  {
+    "id": "extension",
+    "title": "Live in the browser",
+    "why": "extension frameworks"
+  },
+  {
+    "id": "automation",
+    "title": "Make it run itself",
+    "why": "workflows, jobs and bots"
+  },
+  {
+    "id": "site",
+    "title": "Make it fast and findable",
+    "why": "websites and landing pages"
+  },
+  {
+    "id": "storage",
+    "title": "Keep the big files",
+    "why": "images, audio, video"
+  },
+  {
+    "id": "ship",
+    "title": "Go live",
+    "why": "hosting"
+  },
+  {
+    "id": "analytics",
+    "title": "See who shows up",
+    "why": "analytics, errors and uptime"
+  }
+]

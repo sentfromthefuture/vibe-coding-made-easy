@@ -1,0 +1,115 @@
+[
+  {
+    "id": "saas",
+    "name": "SaaS product",
+    "blurb": "Accounts, plans, dashboards",
+    "stages": [
+      "design",
+      "build",
+      "data",
+      "auth",
+      "payments",
+      "email",
+      "ship",
+      "analytics"
+    ]
+  },
+  {
+    "id": "marketplace",
+    "name": "Marketplace",
+    "blurb": "Two sides, one booking",
+    "stages": [
+      "design",
+      "build",
+      "data",
+      "auth",
+      "payments",
+      "email",
+      "storage",
+      "ship",
+      "analytics"
+    ]
+  },
+  {
+    "id": "mobile-app",
+    "name": "Mobile app",
+    "blurb": "Phone first, store ready",
+    "stages": [
+      "design",
+      "build",
+      "data",
+      "auth",
+      "mobile",
+      "payments",
+      "ship",
+      "analytics"
+    ]
+  },
+  {
+    "id": "ai-tool",
+    "name": "AI tool",
+    "blurb": "Prompts, voices, pipelines",
+    "stages": [
+      "design",
+      "build",
+      "ai",
+      "data",
+      "auth",
+      "storage",
+      "ship",
+      "analytics"
+    ]
+  },
+  {
+    "id": "game",
+    "name": "Game",
+    "blurb": "Play in the browser",
+    "stages": [
+      "design",
+      "game",
+      "build",
+      "data",
+      "ship",
+      "analytics"
+    ]
+  },
+  {
+    "id": "site",
+    "name": "Site or portfolio",
+    "blurb": "Fast, pretty, findable",
+    "stages": [
+      "design",
+      "site",
+      "build",
+      "email",
+      "ship",
+      "analytics"
+    ]
+  },
+  {
+    "id": "extension",
+    "name": "Extension",
+    "blurb": "Lives inside the browser",
+    "stages": [
+      "design",
+      "extension",
+      "build",
+      "auth",
+      "payments",
+      "ship"
+    ]
+  },
+  {
+    "id": "automation",
+    "name": "Automation",
+    "blurb": "Bots, hooks, scheduled jobs",
+    "stages": [
+      "automation",
+      "build",
+      "ai",
+      "data",
+      "email",
+      "ship"
+    ]
+  }
+]
