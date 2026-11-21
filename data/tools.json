@@ -4,21 +4,47 @@
     "name": "v0",
     "stage": "design",
     "tier": "popular",
-    "url": "https://v0.dev",
+    "status": "active",
+    "url": "https://v0.app",
     "best_for": "Prompt to React UI you can copy out",
+    "tradeoffs": "Produces clean React and Tailwind UI quickly and syncs with GitHub, but it is a credit meter rather than a flat fee. Long iteration sessions burn credits fast, and its strength is the front end, not a full backend.",
+    "long_term": "Export to your own repo early (it creates a branch per chat and can open pull requests) so the code outlives the subscription. Best used as the design-to-code step that feeds a real codebase.",
+    "watch_out": [
+      "Billed separately from Vercel hosting",
+      "Monthly credits roll over once and expire after about 65 days",
+      "Plans were reshuffled in 2026: Team renamed Plus in July, personal accounts converted to team workspaces in October",
+      "Moved from v0.dev to v0.app in January 2026"
+    ],
     "pricing_model": "freemium",
+    "pricing_notes": "Free: about $5 of monthly credits and 7 messages a day. Plus about $30 per user per month with $30 of credits; Business about $100. Checked November 2026.",
     "region": "global",
-    "last_checked": null
+    "confidence": "researched",
+    "sources": [
+      "https://v0.app/docs/pricing",
+      "https://dupple.com/learn/v0-pricing",
+      "https://flexprice.io/pricing-index/v0"
+    ],
+    "last_checked": "2026-11-21"
   },
   {
     "id": "stitch",
     "name": "Stitch",
     "stage": "design",
     "tier": "popular",
+    "status": "active",
     "url": "https://stitch.withgoogle.com",
     "best_for": "Prompt to screen designs, exportable to code",
+    "tradeoffs": "Fast way to get screen designs from a prompt or sketch, with export toward code and design tools. Output is a starting point: layouts still need real component structure and consistency.",
+    "long_term": "It comes from Google Labs, so features and limits can change with little notice. Export what you like instead of treating it as your design source of truth.",
+    "watch_out": [
+      "Experimental product: limits and availability may change",
+      "Generated screens are not a design system",
+      "Check generation limits on the current plan page"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -26,10 +52,19 @@
     "name": "Magic Patterns",
     "stage": "design",
     "tier": "niche",
+    "status": "active",
     "url": "https://www.magicpatterns.com",
     "best_for": "Prompt to editable UI with design variations",
+    "tradeoffs": "Strong at producing several editable variations from a prompt or screenshot, aimed at product teams. It is a design tool first, not a full app builder.",
+    "long_term": "A smaller company than the big builders, so keep exported code and designs in your own repo.",
+    "watch_out": [
+      "Free tier limits the number of generations",
+      "Verify export options and pricing before committing"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -37,43 +72,100 @@
     "name": "Lovable",
     "stage": "build",
     "tier": "popular",
+    "status": "active",
     "url": "https://lovable.dev",
     "best_for": "Prompt a full web app with no code",
+    "tradeoffs": "Best prompt-to-app experience for non-coders, with GitHub sync, one-click publishing and a built-in cloud backend. Cost is credit-based plus runtime usage, so complex projects and repeated fix attempts burn credits quickly.",
+    "long_term": "You can sync to GitHub and own the code, but long debugging loops are expensive on a credit meter, so many builders move to an editor or coding agent once the app grows. Reported to use TanStack Start for new projects since May 2026.",
+    "watch_out": [
+      "Credits are shared with no per-user guardrails on Pro; Business adds per-member limits",
+      "Cloud function, database and storage usage can add runtime charges",
+      "Unused credits keep their original expiry",
+      "No native app store publishing"
+    ],
     "pricing_model": "freemium",
+    "pricing_notes": "Free: 5 daily credits, capped at 30 a month (official docs). Paid from about $25 a month; annual billing arrived mid-2026; top-ups reported at $15 per 50 credits. Credit counts per plan differ between sources, so confirm on lovable.dev.",
     "region": "global",
-    "last_checked": null
+    "confidence": "researched",
+    "sources": [
+      "https://docs.lovable.dev/introduction/messaging-limits",
+      "https://www.lowcode.agency/blog/lovable-pricing",
+      "https://www.softr.io/blog/lovable-pricing"
+    ],
+    "last_checked": "2026-11-21"
   },
   {
     "id": "bolt-new",
     "name": "Bolt.new",
     "stage": "build",
     "tier": "popular",
+    "status": "active",
     "url": "https://bolt.new",
     "best_for": "Full-stack app in the browser from a prompt",
+    "tradeoffs": "Runs a full-stack dev environment in the browser, so you go from prompt to deployed app fast. Pricing is raw tokens, which are hard to predict as a project grows.",
+    "long_term": "Great for prototypes. Larger codebases mean more context on every prompt, so token cost climbs; move the code to GitHub and an editor when it gets serious.",
+    "watch_out": [
+      "Unused paid tokens roll over only one extra month and are forfeited on cancel",
+      "The free tier has a daily cap as well as a monthly one",
+      "Hosting and database usage are limited per plan"
+    ],
     "pricing_model": "freemium",
+    "pricing_notes": "Free: 1M tokens a month with a 300K daily cap. Pro about $25 a month for 10M tokens; Teams about $30 per member. Checked October 2026.",
     "region": "global",
-    "last_checked": null
+    "confidence": "researched",
+    "sources": [
+      "https://www.bolt.new/pricing",
+      "https://dupple.com/learn/bolt-new-pricing",
+      "https://modelence.com/compare/bolt-new-pricing"
+    ],
+    "last_checked": "2026-11-21"
   },
   {
     "id": "replit-agent",
     "name": "Replit Agent",
     "stage": "build",
     "tier": "popular",
+    "status": "active",
     "url": "https://replit.com",
     "best_for": "Build and host from a phone browser",
+    "tradeoffs": "The one builder here that creates, runs and hosts the app in a single browser tab, which is why it works from a phone. Billing is effort-based, so a request's price is known only after it finishes, though it asks for confirmation before paid actions.",
+    "long_term": "Great for getting something live and iterating without local setup. Costs are harder to predict at scale, and the app lives in Replit's environment unless you export to GitHub.",
+    "watch_out": [
+      "Even Plan Mode chats with the Agent are billable",
+      "Set a spending cap to avoid overage once credits run out",
+      "The effort-based pricing rollout caused user backlash; re-check before building a business on it",
+      "Free Mode covers everyday work on paid plans, but Power and Max modes spend credits"
+    ],
     "pricing_model": "freemium",
+    "pricing_notes": "Core about $25 a month including about $20 of credits (June 2026 figures). Extra usage is billed once credits run out unless capped. Cloud prices were cut in August 2026.",
     "region": "global",
-    "last_checked": null
+    "confidence": "researched",
+    "sources": [
+      "https://docs.replit.com/billing/ai-billing",
+      "https://flexprice.io/pricing-index/replit",
+      "https://www.usecarly.com/blog/replit-agent-pricing-explained"
+    ],
+    "last_checked": "2026-11-21"
   },
   {
     "id": "claude-code",
     "name": "Claude Code",
     "stage": "build",
     "tier": "popular",
+    "status": "active",
     "url": "https://claude.com/product/claude-code",
     "best_for": "Agent that edits a real codebase",
+    "tradeoffs": "Works on a real codebase with your own tools and git history, so you keep full ownership and control. It needs comfort with a terminal or editor, and heavy use is bounded by plan usage caps or API cost.",
+    "long_term": "Pair it with git from day one. The better your tests and written project notes, the better any coding agent performs month after month.",
+    "watch_out": [
+      "Usage limits depend on your plan or API spend; check current Anthropic pricing",
+      "Review diffs, because an agent can change many files at once",
+      "Terminal-first, which is harder from a phone"
+    ],
     "pricing_model": "paid",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -81,21 +173,46 @@
     "name": "Cursor",
     "stage": "build",
     "tier": "popular",
+    "status": "active",
     "url": "https://cursor.com",
     "best_for": "AI-first editor for keeping control of the code",
+    "tradeoffs": "An AI-first editor that keeps you in control of real code. AI usage is metered, and the metering has changed several times.",
+    "long_term": "Third-party coverage reports a SpaceX acquisition completed in August 2026, Auto mode metered from August, a plan restructure on October 12, and OpenAI planning to end its model supply to Cursor from November 12, 2026. Treat model availability and pricing as moving targets.",
+    "watch_out": [
+      "The old $20 Pro plan is reported to keep working for existing subscribers while new customers see a new ladder",
+      "Which models are included may change",
+      "Confirm current pricing and models at cursor.com"
+    ],
     "pricing_model": "freemium",
+    "pricing_notes": "Pro was $20 a month; reports say new customers moved to a ladder starting around $30 a month in October 2026. Verify before paying.",
     "region": "global",
-    "last_checked": null
+    "confidence": "researched",
+    "sources": [
+      "https://www.cloudzero.com/blog/cursor-ai-pricing/",
+      "https://christopheralarcon.com/blog/cursor-pricing/",
+      "https://cursor.com/docs/pricing"
+    ],
+    "last_checked": "2026-11-21"
   },
   {
     "id": "aider",
     "name": "Aider",
     "stage": "build",
     "tier": "niche",
+    "status": "active",
     "url": "https://aider.chat",
     "best_for": "Open-source pair programmer in the terminal",
+    "tradeoffs": "Cheap and transparent: you pay only for model API usage, and every change is a git commit you can undo. Terminal-only, with no hand-holding.",
+    "long_term": "Open source with no vendor lock-in, and it works with many model providers, so you can switch models as prices change.",
+    "watch_out": [
+      "API costs can add up on large repos",
+      "Requires comfort with git and a terminal",
+      "Pace depends on its maintainers; check recent releases"
+    ],
     "pricing_model": "open-source",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -103,21 +220,46 @@
     "name": "Supabase",
     "stage": "data",
     "tier": "popular",
+    "status": "active",
     "url": "https://supabase.com",
     "best_for": "Postgres, auth and storage in one",
+    "tradeoffs": "Postgres plus auth, storage and realtime in one dashboard, with real SQL and no proprietary database. You must understand Row Level Security, or your data can be exposed.",
+    "long_term": "Portable: it is standard Postgres, so you can export or self-host. Pro adds daily backups and removes inactivity pausing.",
+    "watch_out": [
+      "Free projects pause after about a week of low activity, and the restore window is limited",
+      "Free tier: 2 active projects, 500MB database, 50k monthly active users, 5GB egress",
+      "Reported: new projects created after May 30, 2026 need explicit Postgres grants for Data API access, and existing free projects from October 30, 2026",
+      "Turn on Row Level Security before launch"
+    ],
     "pricing_model": "freemium",
+    "pricing_notes": "Pro about $25 a month per project (2026 sources). Checked November 2026.",
     "region": "global",
-    "last_checked": null
+    "confidence": "researched",
+    "sources": [
+      "https://supabase.com/docs/guides/platform/free-project-pausing",
+      "https://www.itpathsolutions.com/supabase-free-tier-limits"
+    ],
+    "last_checked": "2026-11-21"
   },
   {
     "id": "firebase",
     "name": "Firebase",
     "stage": "data",
     "tier": "popular",
+    "status": "active",
     "url": "https://firebase.google.com",
     "best_for": "Realtime data and hosting from Google",
+    "tradeoffs": "Fast to start with realtime data, auth and hosting from Google. The NoSQL data model and proprietary APIs make it harder to leave and weaker for relational queries.",
+    "long_term": "Costs scale with reads and writes, so a chatty app can get expensive. Model your data around the queries you will run.",
+    "watch_out": [
+      "Set budget alerts early",
+      "Security rule mistakes expose data",
+      "Migrating off Firestore later is real work"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -125,10 +267,20 @@
     "name": "Neon",
     "stage": "data",
     "tier": "popular",
+    "status": "active",
     "url": "https://neon.com",
     "best_for": "Serverless Postgres that scales to zero",
+    "tradeoffs": "Serverless Postgres that scales to zero and branches databases instantly, which is great for preview environments. Cold starts can add latency on idle databases.",
+    "long_term": "Neon was acquired by Databricks in 2025; check the current roadmap and terms. It stays standard Postgres, so leaving is easy.",
+    "watch_out": [
+      "Cold-start delay after idle on small plans",
+      "Check free-tier compute and storage limits",
+      "Connection pooling settings matter on serverless hosts"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -136,10 +288,20 @@
     "name": "PocketBase",
     "stage": "data",
     "tier": "niche",
+    "status": "active",
     "url": "https://pocketbase.io",
     "best_for": "Whole backend in a single file",
+    "tradeoffs": "One small executable gives you a database, auth, file storage and an admin UI. Excellent for small apps, but it is SQLite on one server, so scaling out is a limit.",
+    "long_term": "You host it yourself, so backups, updates and uptime are yours. It is pre-1.0, so expect breaking changes between versions.",
+    "watch_out": [
+      "Back up the data folder regularly",
+      "Not designed for horizontal scale",
+      "Upgrades can break between pre-1.0 versions"
+    ],
     "pricing_model": "open-source",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -147,10 +309,20 @@
     "name": "Convex",
     "stage": "data",
     "tier": "niche",
+    "status": "active",
     "url": "https://convex.dev",
     "best_for": "Reactive backend written in TypeScript",
+    "tradeoffs": "A reactive backend where queries update live and everything is TypeScript. It is a proprietary model with its own concepts rather than SQL.",
+    "long_term": "An open-source backend exists, but most people use the hosted service. Moving off means rewriting data access.",
+    "watch_out": [
+      "Learn its query and mutation model first",
+      "Lock-in is higher than with Postgres options",
+      "Watch usage-based costs as data grows"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -158,10 +330,20 @@
     "name": "Turso",
     "stage": "data",
     "tier": "niche",
+    "status": "active",
     "url": "https://turso.tech",
     "best_for": "Tiny SQLite databases at the edge",
+    "tradeoffs": "SQLite-compatible (libSQL) databases that are cheap and quick to create, even one per user. Fewer features than Postgres and a smaller ecosystem.",
+    "long_term": "A good fit for read-heavy apps and per-tenant databases.",
+    "watch_out": [
+      "SQLite behaviour differs from Postgres",
+      "Check limits and pricing for the number of databases",
+      "Smaller community and tooling"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -169,10 +351,20 @@
     "name": "Clerk",
     "stage": "auth",
     "tier": "popular",
+    "status": "active",
     "url": "https://clerk.com",
     "best_for": "Drop-in sign-in screens and user management",
+    "tradeoffs": "Beautiful drop-in sign-in components and user management in minutes. You pay by monthly active user, and your users live in Clerk.",
+    "long_term": "Migrating users away later is possible but takes effort, and costs grow with active users.",
+    "watch_out": [
+      "The free tier is limited by monthly active users",
+      "Use webhooks to sync users to your own database",
+      "Login uptime depends on a third party"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -180,10 +372,20 @@
     "name": "Better Auth",
     "stage": "auth",
     "tier": "niche",
+    "status": "active",
     "url": "https://www.better-auth.com",
     "best_for": "Open-source auth you own",
+    "tradeoffs": "An open-source TypeScript auth library that runs inside your app against your own database. More setup, and you own security updates.",
+    "long_term": "No per-user fees or vendor lock-in. It is a relatively young project, so APIs change.",
+    "watch_out": [
+      "You are responsible for upgrades and security patches",
+      "Younger than established options",
+      "Check plugin maturity for features like organizations"
+    ],
     "pricing_model": "open-source",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -191,43 +393,98 @@
     "name": "Stripe",
     "stage": "payments",
     "tier": "popular",
+    "status": "active",
     "url": "https://stripe.com",
     "best_for": "Cards and subscriptions",
+    "tradeoffs": "The most complete payments platform, with excellent docs. By default you remain the seller of record, so global sales tax is your job.",
+    "long_term": "Stripe Managed Payments, built from the Lemon Squeezy acquisition and reported generally available since April 2026, makes Stripe the legal seller for eligible transactions and handles indirect tax. It is not available in every country.",
+    "watch_out": [
+      "Check Stripe's supported countries before building around it",
+      "Managed Payments is separate from Stripe Tax",
+      "Plan for disputes and chargebacks"
+    ],
     "pricing_model": "paid",
+    "pricing_notes": "Standard processing is a percentage plus a fixed fee per charge; Managed Payments adds its own fee. Confirm current rates on stripe.com.",
     "region": "global",
-    "last_checked": null
+    "confidence": "researched",
+    "sources": [
+      "https://payproglobal.com/?p=23022",
+      "https://mjtsai.com/blog/2026/11/19/lemon-squeezy-shutting-down/"
+    ],
+    "last_checked": "2026-11-21"
   },
   {
     "id": "lemon-squeezy",
     "name": "Lemon Squeezy",
     "stage": "payments",
     "tier": "niche",
+    "status": "sunsetting",
     "url": "https://www.lemonsqueezy.com",
     "best_for": "Sell digital products with tax handled",
+    "tradeoffs": "A merchant of record that handled global sales tax for digital products, but it is winding down.",
+    "long_term": "Reported: it will stop processing payments on March 31, 2027 and is steering customers to Stripe Managed Payments, which is not available in every country Lemon Squeezy supported.",
+    "watch_out": [
+      "Do not start new projects on it",
+      "If you use it, plan a migration (Stripe Managed Payments, Paddle or another merchant of record)",
+      "Check country eligibility for the replacement"
+    ],
     "pricing_model": "paid",
     "region": "global",
-    "last_checked": null
+    "confidence": "researched",
+    "sources": [
+      "https://www.therepository.email/lemon-squeezy-founded-by-wordpress-veterans-is-winding-down-two-years-after-stripe-acquisition",
+      "https://mjtsai.com/blog/2026/11/19/lemon-squeezy-shutting-down/"
+    ],
+    "last_checked": "2026-11-21",
+    "replaced_by": [
+      "stripe",
+      "paddle"
+    ]
   },
   {
     "id": "flutterwave",
     "name": "Flutterwave",
     "stage": "payments",
     "tier": "popular",
+    "status": "active",
     "url": "https://flutterwave.com",
     "best_for": "Cards and mobile money across Africa",
+    "tradeoffs": "Strong African coverage including mobile money. Integration can be fiddlier than Stripe, and which payment methods work differs by country and currency.",
+    "long_term": "Reported to hold a Bank of Zambia payment system licence since February 2025, supporting local and international payments by card and mobile money (MTN, Airtel, Zamtel).",
+    "watch_out": [
+      "Zambia mobile money is on by default for Zambian merchants; non-Zambian merchants must request it",
+      "Not every method works in every country, so check the methods table per currency",
+      "Test mode auto-approves mobile money, which live payments do not"
+    ],
     "pricing_model": "paid",
     "region": "africa",
-    "last_checked": null
+    "confidence": "researched",
+    "sources": [
+      "https://developer.flutterwave.com/docs/zambia-mobile-money",
+      "https://thepaypers.com/payments/news/flutterwave-gains-payment-system-licence-from-the-bank-of-zambia",
+      "https://techpoint.africa/news/flutterwave-payment-licence-zambia/"
+    ],
+    "last_checked": "2026-11-21"
   },
   {
     "id": "paystack",
     "name": "Paystack",
     "stage": "payments",
     "tier": "popular",
+    "status": "active",
     "url": "https://paystack.com",
     "best_for": "Payments for African businesses",
+    "tradeoffs": "Clean developer experience and owned by Stripe since 2020. Country coverage is narrower than Flutterwave, so confirm yours is supported; Zambia coverage was not verified here.",
+    "long_term": "Settlement currency and timing depend on your country and account type.",
+    "watch_out": [
+      "Verify supported countries and currencies",
+      "Payout currency and timing vary",
+      "Mobile money availability varies by market"
+    ],
     "pricing_model": "paid",
     "region": "africa",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -235,10 +492,20 @@
     "name": "Resend",
     "stage": "email",
     "tier": "popular",
+    "status": "active",
     "url": "https://resend.com",
     "best_for": "Email API made for developers",
+    "tradeoffs": "A simple API and React Email templates make transactional email painless. It focuses on sending, not full marketing automation.",
+    "long_term": "Deliverability is on you: set up SPF, DKIM and DMARC on your own domain.",
+    "watch_out": [
+      "Free tier has sending caps",
+      "Verify your domain before launch",
+      "Handle bounces and complaints"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -246,10 +513,20 @@
     "name": "OpenRouter",
     "stage": "ai",
     "tier": "popular",
+    "status": "active",
     "url": "https://openrouter.ai",
     "best_for": "One API key for many models",
+    "tradeoffs": "One key and one API for many models, so switching as prices change is easy. It adds a layer between you and the provider, and availability and latency vary by model.",
+    "long_term": "Handy for comparing models, but a direct provider account can be cheaper at volume.",
+    "watch_out": [
+      "Per-model pricing differs, so set spending limits",
+      "Provider outages and model retirements still affect you",
+      "Data handling differs by upstream provider"
+    ],
     "pricing_model": "paid",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -257,10 +534,20 @@
     "name": "Gemini API",
     "stage": "ai",
     "tier": "popular",
+    "status": "active",
     "url": "https://ai.google.dev",
     "best_for": "Google models with a free tier to start",
+    "tradeoffs": "Strong multimodal and long-context features, with a free tier that is handy for prototyping. Quotas and model names change often.",
+    "long_term": "Plan for model versions being replaced over time.",
+    "watch_out": [
+      "Check whether free-tier data may be used to improve products",
+      "Rate limits are tighter on the free tier",
+      "Pin model versions and test upgrades"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -268,10 +555,20 @@
     "name": "Claude API",
     "stage": "ai",
     "tier": "popular",
+    "status": "active",
     "url": "https://docs.claude.com",
     "best_for": "Text and tool-using models",
+    "tradeoffs": "Strong at coding and tool use, with prompt caching and batch discounts to control cost. Usage-based, so cost scales with traffic.",
+    "long_term": "Models are retired on a schedule, so pin a version and plan upgrades.",
+    "watch_out": [
+      "Set budget and rate limits on your key",
+      "Never put the key in front-end code",
+      "Handle rate limit errors with retries"
+    ],
     "pricing_model": "paid",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -279,10 +576,20 @@
     "name": "ElevenLabs",
     "stage": "ai",
     "tier": "popular",
+    "status": "active",
     "url": "https://elevenlabs.io",
     "best_for": "Realistic voices and speech",
+    "tradeoffs": "Very natural voices and voice cloning. Credit pricing makes long audio expensive, and cloning needs consent.",
+    "long_term": "Check commercial-use terms for your plan before shipping a product on it.",
+    "watch_out": [
+      "Credits are consumed per character",
+      "Voice cloning requires consent and has usage policies",
+      "Commercial licence terms depend on plan"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -290,10 +597,20 @@
     "name": "fal",
     "stage": "ai",
     "tier": "niche",
+    "status": "active",
     "url": "https://fal.ai",
     "best_for": "Fast image and video model APIs",
+    "tradeoffs": "Fast hosted image, video and audio models behind a simple API. Pay per generation, so costs are unpredictable if users generate freely.",
+    "long_term": "Models come and go, so avoid hard-wiring one.",
+    "watch_out": [
+      "Add per-user generation limits",
+      "Review each model's licence for commercial use",
+      "Model availability changes"
+    ],
     "pricing_model": "paid",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -301,10 +618,20 @@
     "name": "Expo",
     "stage": "mobile",
     "tier": "popular",
+    "status": "active",
     "url": "https://expo.dev",
     "best_for": "React Native apps without native setup",
+    "tradeoffs": "The fastest route to a real iOS and Android app with React and TypeScript, with cloud builds and over-the-air updates. Custom native code means leaving the easy path.",
+    "long_term": "App store rules, not the framework, are the real bottleneck.",
+    "watch_out": [
+      "Apple and Google developer accounts are paid and required",
+      "Cloud build queues are slower on free tiers",
+      "Some native modules need a development build instead of Expo Go"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -312,10 +639,20 @@
     "name": "Capacitor",
     "stage": "mobile",
     "tier": "niche",
+    "status": "active",
     "url": "https://capacitorjs.com",
     "best_for": "Wrap a web app as a native app",
+    "tradeoffs": "Wraps an existing web app as an iOS or Android app with native plugins. It is still a web view, so heavy animation feels less native.",
+    "long_term": "Good when you already have a web app and want store presence.",
+    "watch_out": [
+      "Stores may reject thin web wrappers",
+      "Plugin maintenance varies",
+      "Test on real devices"
+    ],
     "pricing_model": "open-source",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -323,10 +660,20 @@
     "name": "FlutterFlow",
     "stage": "mobile",
     "tier": "popular",
+    "status": "active",
     "url": "https://flutterflow.io",
     "best_for": "Visual builder for mobile apps",
+    "tradeoffs": "A visual builder that produces Flutter apps with a polished UI kit. You live in Flutter and Dart, and exported code can be hard to maintain by hand.",
+    "long_term": "Fine for MVPs; consider how you would maintain it if you leave the builder.",
+    "watch_out": [
+      "Code export is limited to paid plans (check current terms)",
+      "Complex logic is clunky in visual form",
+      "Dart skills differ from React"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -334,10 +681,20 @@
     "name": "Phaser",
     "stage": "game",
     "tier": "popular",
+    "status": "active",
     "url": "https://phaser.io",
     "best_for": "The classic 2D browser game framework",
+    "tradeoffs": "Mature, with a huge community and many examples, ideal for 2D browser games. Code-first, with no built-in editor.",
+    "long_term": "You need JavaScript or TypeScript skills, but the ecosystem is deep.",
+    "watch_out": [
+      "Mobile browser performance varies",
+      "Check licences for art and audio",
+      "Plan how to package for app stores"
+    ],
     "pricing_model": "open-source",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -345,10 +702,20 @@
     "name": "KAPLAY",
     "stage": "game",
     "tier": "niche",
+    "status": "active",
     "url": "https://kaplayjs.com",
     "best_for": "Playful JavaScript game library",
+    "tradeoffs": "A friendly small library for quick 2D games, ideal for jams and learning. Smaller ecosystem and less suited to large projects.",
+    "long_term": "It continues the community fork of Kaboom.js, so many older Kaboom tutorials still apply.",
+    "watch_out": [
+      "Smaller community than Phaser",
+      "Large games may outgrow it",
+      "Check recent release activity"
+    ],
     "pricing_model": "open-source",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -356,10 +723,20 @@
     "name": "Rosebud",
     "stage": "game",
     "tier": "niche",
+    "status": "active",
     "url": "https://rosebud.ai",
     "best_for": "Describe a game, play it in the browser",
+    "tradeoffs": "Describe a game and play it in the browser, with AI-generated assets. Quick, fun prototypes, but limited control and platform lock-in.",
+    "long_term": "Treat it as a sketchpad for ideas unless export terms suit you.",
+    "watch_out": [
+      "Check export and ownership terms",
+      "Generation is credit-based",
+      "Quality varies on complex mechanics"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -367,32 +744,70 @@
     "name": "WXT",
     "stage": "extension",
     "tier": "niche",
+    "status": "active",
     "url": "https://wxt.dev",
     "best_for": "Modern framework for browser extensions",
+    "tradeoffs": "A modern Vite-based framework that targets Chrome, Firefox, Edge and Safari from one codebase, with HMR and publishing helpers. Still pre-1.0, so APIs can change between releases.",
+    "long_term": "Reported actively maintained through 2026 (a release in August 2026) and named the default pick for new extensions by several 2026 comparisons.",
+    "watch_out": [
+      "Pre-1.0 versions can bring breaking changes",
+      "Store review has strict permission rules",
+      "Chrome Web Store discovery is slow without promotion"
+    ],
     "pricing_model": "open-source",
     "region": "global",
-    "last_checked": null
+    "confidence": "researched",
+    "sources": [
+      "https://merginit.com/blog/23082026-plasmo-vs-wxt-vs-crxjs-extension-js",
+      "https://wxt.dev/guide/resources/compare",
+      "https://dev.to/quangpl/plasmo-vs-crxjs-vs-wxt-which-chrome-extension-framework-should-you-use-in-2026-37o4"
+    ],
+    "last_checked": "2026-11-21"
   },
   {
     "id": "plasmo",
     "name": "Plasmo",
     "stage": "extension",
     "tier": "niche",
+    "status": "caution",
     "url": "https://www.plasmo.com",
     "best_for": "Batteries-included extension framework",
+    "tradeoffs": "React-first with the most tutorials and a smooth first run, but described by WXT's comparison and other sources as in maintenance mode.",
+    "long_term": "Reported: latest npm release was in May 2025 (per an October 2026 comparison), and an older Parcel version blocks Tailwind v4. Fine for an existing app, risky as a fresh pick.",
+    "watch_out": [
+      "Little active feature development reported",
+      "Build tooling lags behind Vite-based options",
+      "Migrating to WXT or Extension.js is possible but takes effort"
+    ],
     "pricing_model": "open-source",
     "region": "global",
-    "last_checked": null
+    "confidence": "researched",
+    "sources": [
+      "https://wxt.dev/guide/resources/compare",
+      "https://extension.js.org/docs/compare/extension-js-vs-plasmo.md",
+      "https://dev.to/quangpl/plasmo-vs-crxjs-vs-wxt-which-chrome-extension-framework-should-you-use-in-2026-37o4"
+    ],
+    "last_checked": "2026-11-21"
   },
   {
     "id": "n8n",
     "name": "n8n",
     "stage": "automation",
     "tier": "popular",
+    "status": "active",
     "url": "https://n8n.io",
     "best_for": "Visual workflows you can self-host",
+    "tradeoffs": "Powerful visual workflow builder you can self-host. Its licence is source-available (fair-code), not open source, with limits on reselling it as a service.",
+    "long_term": "Cloud pricing counts workflow executions. Self-hosting is cheap but real ops work.",
+    "watch_out": [
+      "Read the Sustainable Use Licence if you plan to resell",
+      "Protect credentials stored in workflows",
+      "Self-hosted upgrades can break workflows"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -400,10 +815,20 @@
     "name": "Val Town",
     "stage": "automation",
     "tier": "niche",
+    "status": "active",
     "url": "https://www.val.town",
     "best_for": "Write a function, get a live URL",
+    "tradeoffs": "Write a function and get a URL, a cron job or an email handler instantly. Perfect for small scripts and glue, not large apps.",
+    "long_term": "Great for quick automations, with a vendor-specific runtime.",
+    "watch_out": [
+      "Runtime limits apply on free plans",
+      "Code depends on the platform's runtime",
+      "Check limits before relying on it"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -411,10 +836,20 @@
     "name": "Activepieces",
     "stage": "automation",
     "tier": "niche",
+    "status": "active",
     "url": "https://www.activepieces.com",
     "best_for": "Open-source automation builder",
+    "tradeoffs": "An open-source-core automation builder with a friendly UI. Fewer ready-made integrations than the biggest players.",
+    "long_term": "Self-hosting works, but you maintain it.",
+    "watch_out": [
+      "Smaller integration library",
+      "Some features are paid editions",
+      "Self-hosting means ops work"
+    ],
     "pricing_model": "open-source",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -422,10 +857,20 @@
     "name": "Trigger.dev",
     "stage": "automation",
     "tier": "niche",
+    "status": "active",
     "url": "https://trigger.dev",
     "best_for": "Background jobs for long tasks",
+    "tradeoffs": "Run long background jobs and scheduled tasks in TypeScript without timeouts, with retries and logs. One more service to learn and pay for.",
+    "long_term": "Replaces fragile queues in serverless apps.",
+    "watch_out": [
+      "Check free-tier run limits",
+      "Queue delays can occur",
+      "Self-hosting needs ops"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -433,10 +878,20 @@
     "name": "Astro",
     "stage": "site",
     "tier": "popular",
+    "status": "active",
     "url": "https://astro.build",
     "best_for": "Content sites that load fast",
+    "tradeoffs": "Ships very little JavaScript so content sites load fast, and mixes React, Vue and Svelte. Not the first pick for highly interactive app-like products.",
+    "long_term": "Pair it with a host such as Cloudflare, Netlify or Vercel.",
+    "watch_out": [
+      "Content collections and islands have a learning curve",
+      "Major upgrades need migration work",
+      "Interactive dashboards fit other frameworks better"
+    ],
     "pricing_model": "open-source",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -444,10 +899,20 @@
     "name": "Framer",
     "stage": "site",
     "tier": "popular",
+    "status": "active",
     "url": "https://www.framer.com",
     "best_for": "Design and publish a site visually",
+    "tradeoffs": "Design and publish a polished site visually, with animations and a CMS. You are tied to Framer hosting and pricing, with no source code export.",
+    "long_term": "Great for marketing sites; weak if you may later need custom backend logic.",
+    "watch_out": [
+      "Pricing is per site",
+      "No true code export",
+      "CMS limits on lower plans"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -455,43 +920,93 @@
     "name": "Vercel",
     "stage": "ship",
     "tier": "popular",
+    "status": "active",
     "url": "https://vercel.com",
     "best_for": "Push to deploy for Next.js and more",
+    "tradeoffs": "The smoothest deploy experience for Next.js, with preview URLs on every push. Usage-based pricing can surprise you as traffic grows.",
+    "long_term": "The Hobby plan is for non-commercial personal use only. Any commercial project needs Pro, about $20 per user per month with $20 of included usage.",
+    "watch_out": [
+      "Moving a client or paid project off Hobby is required by the terms",
+      "Bandwidth, function and image optimization overages are metered",
+      "v0 is billed separately from Vercel"
+    ],
     "pricing_model": "freemium",
+    "pricing_notes": "Hobby: free, non-commercial. Pro: about $20 per user per month plus $20 usage credit. Checked November 2026.",
     "region": "global",
-    "last_checked": null
+    "confidence": "researched",
+    "sources": [
+      "https://vercel.com/docs/limits/fair-use-policy",
+      "https://vercel.com/docs/plans/hobby",
+      "https://schematichq.com/blog/vercel-pricing"
+    ],
+    "last_checked": "2026-11-21"
   },
   {
     "id": "netlify",
     "name": "Netlify",
     "stage": "ship",
     "tier": "popular",
+    "status": "active",
     "url": "https://www.netlify.com",
     "best_for": "Simple static and serverless hosting",
+    "tradeoffs": "Friendly static and serverless hosting, and the free tier allows commercial use within limits.",
+    "long_term": "Moved to credit-based usage; reported flat $20 Pro with unlimited team members from April 2026 (verify).",
+    "watch_out": [
+      "Free tier reported to have a hard credit limit with no overages",
+      "Credit systems make cost harder to predict",
+      "Confirm current pricing"
+    ],
     "pricing_model": "freemium",
     "region": "global",
-    "last_checked": null
+    "confidence": "partly-researched",
+    "sources": [
+      "https://northflank.com/blog/vercel-vs-netlify-choosing-the-deployment-platform-in-2025"
+    ],
+    "last_checked": "2026-11-21"
   },
   {
-    "id": "cloudflare-pages",
-    "name": "Cloudflare Pages",
+    "id": "cloudflare-workers",
+    "name": "Cloudflare Workers + Pages",
     "stage": "ship",
     "tier": "popular",
-    "url": "https://pages.cloudflare.com",
-    "best_for": "Free-tier hosting on a global network",
+    "status": "active",
+    "url": "https://developers.cloudflare.com/workers/static-assets/",
+    "best_for": "Free-tier hosting on a global network, static or full-stack",
+    "tradeoffs": "A global network with a generous free tier, and static asset requests are free. More config-driven than Vercel or Netlify.",
+    "long_term": "Cloudflare now recommends Workers with Static Assets for new projects and focuses new features there. Pages keeps working and has a documented migration path.",
+    "watch_out": [
+      "Workers serve static assets before your code by default, unlike Pages Functions",
+      "Frameworks like Next.js need an adapter",
+      "Check Workers CPU and size limits"
+    ],
     "pricing_model": "freemium",
     "region": "global",
-    "last_checked": null
+    "confidence": "researched",
+    "sources": [
+      "https://flaviocopes.com/cloudflare-pages-vs-workers/",
+      "https://developers.cloudflare.com/workers/static-assets/migrate-from-pages"
+    ],
+    "last_checked": "2026-11-21"
   },
   {
     "id": "render",
     "name": "Render",
     "stage": "ship",
     "tier": "popular",
+    "status": "active",
     "url": "https://render.com",
     "best_for": "Hosting for web services and workers",
+    "tradeoffs": "Simple hosting for web services, workers, cron jobs and Postgres, with a Heroku-like feel. Free instances sleep when idle, so the first request is slow.",
+    "long_term": "A good step up from free hosts once you need background workers.",
+    "watch_out": [
+      "Free web services sleep after inactivity",
+      "Check the free database retention policy",
+      "Background workers are paid"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -499,10 +1014,20 @@
     "name": "Cloudflare R2",
     "stage": "storage",
     "tier": "popular",
+    "status": "active",
     "url": "https://developers.cloudflare.com/r2/",
     "best_for": "Object storage without egress fees",
+    "tradeoffs": "S3-compatible storage with no egress fees, great for media-heavy apps. Fewer features than S3, and you design access control yourself.",
+    "long_term": "Cheap to keep large files for years.",
+    "watch_out": [
+      "Read and write operations are still charged",
+      "Use signed URLs for private files",
+      "Never expose bucket credentials in the browser"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -510,10 +1035,20 @@
     "name": "UploadThing",
     "stage": "storage",
     "tier": "niche",
+    "status": "active",
     "url": "https://uploadthing.com",
     "best_for": "File uploads in a few lines",
+    "tradeoffs": "File uploads in a few lines with typed helpers, ideal for React and Next apps. Another service with its own pricing and some SDK lock-in.",
+    "long_term": "Plan an export path for stored files.",
+    "watch_out": [
+      "Check storage and bandwidth limits",
+      "Files live on their infrastructure",
+      "SDK ties your upload flow to the service"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -521,10 +1056,20 @@
     "name": "PostHog",
     "stage": "analytics",
     "tier": "popular",
+    "status": "active",
     "url": "https://posthog.com",
     "best_for": "Product analytics and session replay",
+    "tradeoffs": "Product analytics, session replay, feature flags and experiments in one place. Powerful but heavy to configure, and usage costs grow with events and recordings.",
+    "long_term": "Pays off once you have real users to learn from.",
+    "watch_out": [
+      "Control event volume",
+      "Mind privacy and cookie consent obligations",
+      "Mask sensitive fields in session replay"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -532,10 +1077,20 @@
     "name": "Plausible",
     "stage": "analytics",
     "tier": "niche",
+    "status": "active",
     "url": "https://plausible.io",
     "best_for": "Simple privacy-friendly traffic stats",
+    "tradeoffs": "Lightweight, privacy-friendly traffic stats without cookies. Not a product analytics tool, and paid for hosted plans.",
+    "long_term": "Open-source and self-hostable, with ops work if you do.",
+    "watch_out": [
+      "Hosted pricing scales with pageviews",
+      "Not for detailed per-user analysis",
+      "Self-hosting means updates and backups"
+    ],
     "pricing_model": "paid",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -543,10 +1098,20 @@
     "name": "Sentry",
     "stage": "analytics",
     "tier": "popular",
+    "status": "active",
     "url": "https://sentry.io",
     "best_for": "Catch errors before users report them",
+    "tradeoffs": "Catches front-end and back-end errors with stack traces and release tracking. A generous free tier, but event volume and performance monitoring add cost.",
+    "long_term": "Install it before launch, not after the first outage.",
+    "watch_out": [
+      "Scrub personal data from events",
+      "Set sampling rates to control cost",
+      "Filter noise from third-party scripts"
+    ],
     "pricing_model": "freemium",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   },
   {
@@ -554,10 +1119,41 @@
     "name": "Uptime Kuma",
     "stage": "analytics",
     "tier": "niche",
+    "status": "active",
     "url": "https://github.com/louislam/uptime-kuma",
     "best_for": "Self-hosted uptime monitor",
+    "tradeoffs": "A free self-hosted monitor with a clean dashboard and many alert channels. If its own server goes down, your monitoring goes with it.",
+    "long_term": "Run it on a different provider from the apps it watches.",
+    "watch_out": [
+      "You maintain updates and backups",
+      "Host it separately from what it monitors",
+      "Test that alerts actually reach you"
+    ],
     "pricing_model": "open-source",
     "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
+    "last_checked": null
+  },
+  {
+    "id": "paddle",
+    "name": "Paddle",
+    "stage": "payments",
+    "tier": "popular",
+    "status": "active",
+    "url": "https://www.paddle.com",
+    "best_for": "Merchant of record for global software sales",
+    "tradeoffs": "A merchant of record: Paddle sells to your customer and handles tax and compliance, which saves registrations. Fees are higher than a plain processor and businesses are reviewed before going live.",
+    "long_term": "Suits software sold globally when you do not want to manage tax yourself.",
+    "watch_out": [
+      "Check fee structure and which countries it pays out to",
+      "Approval review before you can sell",
+      "Fewer customization options than raw Stripe"
+    ],
+    "pricing_model": "paid",
+    "region": "global",
+    "confidence": "general-knowledge",
+    "sources": [],
     "last_checked": null
   }
 ]

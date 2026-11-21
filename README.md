@@ -16,8 +16,23 @@ vibe-coding-made-easy/
 
 - `stages.json`: the stops a roadmap can include (design, build, data, auth, payments, and so on).
 - `idea-types.json`: each idea type and which stops it passes through, in order.
-- `tools.json`: one entry per tool: stage, `tier` (`popular` or `niche`), `pricing_model` (coarse), `region`, and a one-line `best_for`.
+- `tools.json`: one entry per tool:
+  - `stage`, `tier` (`popular` or `niche`), `region`, `pricing_model` (coarse)
+  - `best_for`: the one-line pitch
+  - `tradeoffs`: what you give up by choosing it
+  - `long_term`: what living with it for months looks like (lock-in, ownership, exit paths)
+  - `watch_out`: short list of gotchas
+  - `pricing_notes`: dated specifics, only where checked
+  - `status`: `active`, `caution` (still works, risky as a new pick) or `sunsetting` (do not recommend; see `replaced_by`)
+  - `confidence`: `researched`, `partly-researched` or `general-knowledge`
+  - `sources` and `last_checked`: required for anything researched
 
-`last_checked` is `null` on every tool: links and pricing models were written from general knowledge and still need a verification pass.
+## How reliable is it?
+
+Researched live on 2026-11-21: Lovable, Bolt.new, Replit Agent, v0, Cursor, Supabase, Stripe, Lemon Squeezy, Flutterwave, Cloudflare Workers and Pages, WXT, Plasmo and Vercel (Netlify partly). The other tools carry `general-knowledge` entries: architecture-level trade-offs that rarely change, but no live pricing. They need the same verification pass, and prices on every tool will go stale, so re-check before relying on a number.
+
+What the research changed: v0 moved to v0.app, Cloudflare now recommends Workers over Pages for new projects, Plasmo is reported to be in maintenance mode, and Lemon Squeezy is reported to be shutting down (payments stop 31 March 2027).
+
+The roadmap engine must not recommend `sunsetting` tools and should show a warning on `caution` ones.
 
 Run `python3 scripts/validate.py` after editing the data.
