@@ -2,14 +2,18 @@
 
 Pick the kind of thing you want to build, or describe it, and get a visual roadmap of the friendliest tools to build it with: famous ones and quietly brilliant niche ones.
 
-**Status:** design language settled, tool library started, app not built yet.
+**Status:** working skeleton. The library API, roadmap engine and unstyled screens run end to end. Visual design comes after the structure is settled.
 
 ```
 vibe-coding-made-easy/
-├─ data/      # stages.json, idea-types.json, tools.json (the tool library)
-├─ design/    # tokens.css (palette, type, chamfered corners)
-├─ docs/      # DESIGN.md, ARCHITECTURE.md
-└─ scripts/   # validate.py (checks the library hangs together)
+├─ data/        # stages.json, idea-types.json, tools.json (the tool library)
+├─ src/
+│  ├─ shared/   # types shared by the Worker and the front end
+│  ├─ worker/   # Hono API on a Cloudflare Worker: library, roadmap engine, webhook stub
+│  └─ web/      # React screens: Home, Questions, RoadmapView, ToolDetail (unstyled)
+├─ scripts/     # validate.py (library checks), smoke.ts (engine checks)
+├─ design/      # tokens.css (inspiration, not applied yet)
+└─ docs/        # USER-FLOW.md, ARCHITECTURE.md, DESIGN.md
 ```
 
 ## Tool library
@@ -37,3 +41,16 @@ What the research changed: v0 moved to v0.app, Cloudflare now recommends Workers
 The roadmap engine must not recommend `sunsetting` tools and should show a warning on `caution` ones.
 
 Run `python3 scripts/validate.py` after editing the data.
+
+## Run and deploy
+
+- `npm install`, then `npm test` (engine and library checks) and `npm run build`.
+- `npm run dev` starts the app locally.
+- Deploy: connect this repo to a Cloudflare Worker (build command `npm run build`, deploy command `npx wrangler deploy`), so every push to `main` deploys.
+- Secrets: set `OPENROUTER_API_KEY` and `OPENROUTER_MODEL` as Worker secrets. Without them the engine uses its built-in rules. Never put keys in front-end code.
+
+## What works and what does not yet
+
+Works: library API, region and status filtering, rule-based roadmaps, optional AI picks through OpenRouter (validated against the library), swap a tool, tool detail, copy checklist and starter prompt.
+
+Not built: Dodo Payments webhook (stub returns 501), accounts, saved and shareable roadmaps, rate limiting, any visual design.
