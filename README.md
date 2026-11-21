@@ -57,4 +57,4 @@ With the AI on, one call reads the description (idea type plus extra stops) and 
 
 To turn the AI on, set `OPENROUTER_API_KEY` and `OPENROUTER_MODEL` as Worker secrets. Pick a small, fast model from OpenRouter's model list and check a few roadmaps before trusting it. Each call is capped in size and the roadmap endpoint is rate limited, but set a spending limit on the key as well.
 
-Not built: Dodo Payments webhook (stub returns 501), accounts, saved and shareable roadmaps, any visual design. Only 17 of the 55 tool entries are researched so far.
+Not built: Dodo Payments webhook (stub returns 501), accounts, saved and shareable roadmaps, any visual design. Only 14 of the 55 tool entries are researched so far.
