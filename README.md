@@ -51,6 +51,10 @@ Run `python3 scripts/validate.py` after editing the data.
 
 ## What works and what does not yet
 
-Works: library API, region and status filtering, rule-based roadmaps, optional AI picks through OpenRouter (validated against the library), swap a tool, tool detail, copy checklist and starter prompt.
+Works: library API, region and status filtering, rule-based roadmaps, free-text ideas (keywords add stops such as payments, login or AI), swap a tool, tool detail, copy checklist and starter prompt, rate limiting (10 roadmaps a minute per visitor, approximate per Cloudflare location), and optional AI through OpenRouter.
 
-Not built: Dodo Payments webhook (stub returns 501), accounts, saved and shareable roadmaps, rate limiting, any visual design.
+With the AI on, one call reads the description (idea type plus extra stops) and one call picks tools. Everything the model returns is validated against the library, and any failure falls back to the rules.
+
+To turn the AI on, set `OPENROUTER_API_KEY` and `OPENROUTER_MODEL` as Worker secrets. Pick a small, fast model from OpenRouter's model list and check a few roadmaps before trusting it. Each call is capped in size and the roadmap endpoint is rate limited, but set a spending limit on the key as well.
+
+Not built: Dodo Payments webhook (stub returns 501), accounts, saved and shareable roadmaps, any visual design. Only 17 of the 55 tool entries are researched so far.

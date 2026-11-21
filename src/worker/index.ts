@@ -1,6 +1,8 @@
 import { Hono } from "hono";
 import { buildRoadmap, library } from "./engine";
 import type { AiEnv } from "./engine";
+import { memoryLimiter } from "./limit";
+import type { Limiter } from "./limit";
 import type { RoadmapRequest, RoadmapResponse } from "../shared/types";
 
 const REGIONS = ["everywhere", "africa", "europe", "india", "latin-america"] as const;
@@ -10,7 +12,21 @@ const DEVICE = ["phone", "computer"] as const;
 const oneOf = <T extends string>(v: unknown, allowed: readonly T[], d: T): T =>
   (allowed as readonly unknown[]).includes(v) ? (v as T) : d;
 
-const app = new Hono<{ Bindings: AiEnv }>();
+type Env = AiEnv & { ROADMAP_LIMITER?: Limiter };
+const fallbackLimiter = memoryLimiter(10, 60_000);
+
+const app = new Hono<{ Bindings: Env }>();
+
+// The roadmap endpoint can call a paid model, so limit it per visitor.
+app.use("/api/roadmap", async (c, next) => {
+  if (c.req.method !== "POST") return next();
+  const key = `roadmap:${c.req.header("cf-connecting-ip") ?? "unknown"}`;
+  const { success } = await (c.env.ROADMAP_LIMITER ?? fallbackLimiter).limit({ key });
+  if (!success) {
+    return c.json({ ok: false, error: "rate_limited", message: "Too many roadmaps just now. Wait a minute and try again." } satisfies RoadmapResponse, 429);
+  }
+  await next();
+});
 
 app.get("/api/health", (c) => c.json({ ok: true }));
 
@@ -46,7 +62,5 @@ app.post("/api/roadmap", async (c) => {
 // TODO: verify the Dodo Payments webhook signature, then update subscription state.
 // Until then, refuse everything so unsigned calls cannot change anything.
 app.post("/api/webhooks/dodo", (c) => c.json({ ok: false, error: "not_implemented" }, 501));
-
-// TODO: rate limit /api/roadmap before it is public (it can call a paid model).
 
 export default app;

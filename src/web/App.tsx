@@ -37,7 +37,7 @@ export default function App() {
       });
       const data = (await res.json()) as RoadmapResponse;
       if (data.ok) { setRoadmap(data.roadmap); setStep("roadmap"); }
-      else { setError(data.message); setStep("home"); }
+      else { setError(data.message); if (data.error !== "rate_limited") setStep("home"); }
     } catch {
       setError("Something went wrong. Try again.");
     }

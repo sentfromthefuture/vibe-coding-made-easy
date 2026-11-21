@@ -20,6 +20,7 @@ export function RoadmapView({ lib, roadmap, onOpen, onSwap, onBack }: Props) {
           <section key={s.stage}>
             <h3>{i + 1}. {stage?.title}</h3>
             <p><small>{stage?.why}</small></p>
+            {roadmap.added?.includes(s.stage) && <p><small>Added because of your description.</small></p>}
             {s.picks.map((id) => {
               const t = tool(id);
               if (!t) return null;

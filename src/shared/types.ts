@@ -20,8 +20,8 @@ export interface RoadmapRequest extends Prefs { ideaType?: string; description?:
 
 /** Tool ids only: the client resolves them against the library. */
 export interface Stop { stage: string; picks: string[]; alternatives: string[] }
-export interface Roadmap { ideaType: string; mode: "ai" | "rules"; stops: Stop[] }
+export interface Roadmap { ideaType: string; mode: "ai" | "rules"; stops: Stop[]; added?: string[] }
 
 export type RoadmapResponse =
   | { ok: true; roadmap: Roadmap }
-  | { ok: false; error: "no_match" | "bad_request"; message: string; suggestions?: string[] };
+  | { ok: false; error: "no_match" | "bad_request" | "rate_limited"; message: string; suggestions?: string[] };
